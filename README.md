@@ -141,5 +141,13 @@ SignUp Page
 
 Click on Submit
 
+**Account Created**
 
+<img width="1907" height="656" alt="image" src="https://github.com/user-attachments/assets/729f5af8-ca3d-4f7a-be58-5ca443d172b8" />
+
+**Add a Note to the user**
+
+<img width="1897" height="354" alt="image" src="https://github.com/user-attachments/assets/173e3897-e1ff-4376-a3fe-d0edf2ae340f" />
+
+<img width="1915" height="482" alt="image" src="https://github.com/user-attachments/assets/2d150351-8d3d-42a3-adab-cb00281fa7b1" />
 
