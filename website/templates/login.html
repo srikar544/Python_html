@@ -1,0 +1,72 @@
+<!--
+login.html
+================================================================================
+This template renders the Login page of the Flask application.
+
+Purpose:
+- Extends the base layout (base.html)
+- Displays a login form for existing users
+- Collects email and password credentials
+- Submits the credentials to the backend via POST request
+
+Backend Expectations:
+- The Flask route handling this template should:
+  - Read `email` and `password` from request.form
+  - Validate the credentials
+  - Authenticate the user using Flask-Login
+  - Redirect the user on successful login
+  - Flash error messages on failure
+
+Security Notes:
+- Uses input type="password" to hide typed characters
+- Should be combined with password hashing (e.g., werkzeug.security)
+- CSRF protection is recommended for production use
+================================================================================
+-->
+
+{% extends "base.html" %}
+
+{% block title %}Login{% endblock %}
+
+{% block content %}
+  <!-- Login form -->
+  <!-- Sends a POST request to the same route -->
+  <form method="POST">
+
+    <!-- Form heading -->
+    <h3 align="center">Login</h3>
+
+    <!-- Email input field -->
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required
+      />
+    </div>
+
+    <!-- Password input field -->
+    <div class="form-group">
+      <label for="password">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password"
+        name="password"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+
+    <br />
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary">
+      Login
+    </button>
+  </form>
+{% endblock %}

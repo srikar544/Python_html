@@ -1,0 +1,100 @@
+<!--
+sign_up.html
+================================================================================
+This template renders the Sign Up (Registration) page of the Flask application.
+
+Purpose:
+- Extends the base layout (base.html)
+- Displays a registration form for new users
+- Collects email, first name, and password details
+- Submits user input to the backend via POST request
+
+Backend Expectations:
+- The Flask route handling this template should:
+  - Read `email`, `firstName`, `password1`, and `password2` from request.form
+  - Validate input length and password match
+  - Check if the email already exists in the database
+  - Hash the password before saving (e.g., pbkdf2:sha256)
+  - Create and persist a new User record
+  - Redirect the user on successful registration
+  - Flash validation errors when input is invalid
+
+Security Notes:
+- Password fields use type="password" to hide user input
+- Passwords should never be stored in plain text
+- CSRF protection is recommended for production environments
+================================================================================
+-->
+
+{% extends "base.html" %}
+
+{% block title %}Sign Up{% endblock %}
+
+{% block content %}
+  <!-- Sign Up form -->
+  <!-- Sends a POST request to the same route -->
+  <form method="POST">
+
+    <!-- Form heading -->
+    <h3 align="center">Sign Up</h3>
+
+    <!-- Email input field -->
+    <div class="form-group">
+      <label for="email">Email Address</label>
+      <input
+        type="email"
+        class="form-control"
+        id="email"
+        name="email"
+        placeholder="Enter email"
+        required
+      />
+    </div>
+
+    <!-- First name input field -->
+    <div class="form-group">
+      <label for="firstName">First Name</label>
+      <input
+        type="text"
+        class="form-control"
+        id="firstName"
+        name="firstName"
+        placeholder="Enter first name"
+        required
+      />
+    </div>
+
+    <!-- Password input field -->
+    <div class="form-group">
+      <label for="password1">Password</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password1"
+        name="password1"
+        placeholder="Enter password"
+        required
+      />
+    </div>
+
+    <!-- Confirm password input field -->
+    <div class="form-group">
+      <label for="password2">Password (Confirm)</label>
+      <input
+        type="password"
+        class="form-control"
+        id="password2"
+        name="password2"
+        placeholder="Confirm password"
+        required
+      />
+    </div>
+
+    <br />
+
+    <!-- Submit button -->
+    <button type="submit" class="btn btn-primary">
+      Submit
+    </button>
+  </form>
+{% endblock %}

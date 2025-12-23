@@ -1,0 +1,69 @@
+<!--
+home.html
+================================================================================
+This template represents the Home page of the Flask application.
+
+Purpose:
+- Extends the base layout (base.html)
+- Displays a list of notes belonging to the logged-in user
+- Allows users to add new notes using a form
+- Allows users to delete existing notes using a JavaScript function
+- Relies on Flask-Login to access the authenticated user object
+
+Data Used:
+- user.notes → list of Note objects associated with the logged-in user
+
+Interactions:
+- Submitting the form sends a POST request to add a new note
+- Clicking the delete button calls deleteNote(noteId) to remove a note
+================================================================================
+-->
+
+{% extends "base.html" %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+  <!-- Page heading -->
+  <h1 align="center">Notes</h1>
+
+  <!-- Notes list -->
+  <!-- Iterates over all notes belonging to the logged-in user -->
+  <ul class="list-group list-group-flush" id="notes">
+    {% for note in user.notes %}
+      <li class="list-group-item">
+        <!-- Display note content -->
+        {{ note.data }}
+
+        <!-- Delete button -->
+        <!-- Calls JavaScript deleteNote() with the note ID -->
+        <button
+          type="button"
+          class="close"
+          onClick="deleteNote({{ note.id }})"
+        >
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </li>
+    {% endfor %}
+  </ul>
+
+  <!-- Add new note form -->
+  <!-- Submits a POST request to create a new note -->
+  <form method="POST">
+    <textarea
+      name="note"
+      id="note"
+      class="form-control"
+      placeholder="Write your note here..."
+    ></textarea>
+
+    <br />
+
+    <div align="center">
+      <button type="submit" class="btn btn-primary">
+        Add Note
+      </button>
+    </div>
+  </form>
+{% endblock %}

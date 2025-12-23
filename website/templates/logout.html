@@ -1,0 +1,13 @@
+{% extends "base.html" %}  <!-- Inherit from the base template -->
+
+{% block title %}Logout{% endblock %}  <!-- Sets the page title -->
+
+{% block content %}
+
+<!-- Page header -->
+<h1>This is the Logout page</h1>
+
+<!-- Display dynamic text passed from Flask route -->
+{{ text }}  <!-- Example: "You have successfully logged out." -->
+
+{% endblock %}
