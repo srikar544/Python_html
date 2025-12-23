@@ -137,6 +137,7 @@ SignUp Page
 
 <img width="1824" height="931" alt="image" src="https://github.com/user-attachments/assets/0ee10013-99d1-42b4-8af6-04c023671bb2" />
 
+<img width="1769" height="764" alt="image" src="https://github.com/user-attachments/assets/6867906d-db9e-4798-8c8f-2babf4e4f174" />
 
 
 
