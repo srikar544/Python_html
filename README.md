@@ -125,6 +125,7 @@ app.run(debug=True) starts the development server with debug mode enabled (auto-
 
 **Output**
 
+<img width="1091" height="298" alt="image" src="https://github.com/user-attachments/assets/73c5b2f5-87ea-40e6-85b3-616a32389d9f" />
 
 
 
