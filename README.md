@@ -123,4 +123,9 @@ Calls create_app() to create and configure the Flask app.
 if __name__ == '__main__': ensures the app runs only when this file is executed directly (not when imported).
 app.run(debug=True) starts the development server with debug mode enabled (auto-reloads on code changes and shows detailed error pages).
 
+**Output**
+
+
+
+
 
