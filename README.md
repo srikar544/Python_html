@@ -127,6 +127,17 @@ app.run(debug=True) starts the development server with debug mode enabled (auto-
 
 <img width="1091" height="298" alt="image" src="https://github.com/user-attachments/assets/73c5b2f5-87ea-40e6-85b3-616a32389d9f" />
 
+Open this web application: http://127.0.0.1:5000
+
+Login Page
+
+<img width="1809" height="729" alt="image" src="https://github.com/user-attachments/assets/75c576ca-1afa-4d06-9c75-658a2b6228c6" />
+
+SignUp Page
+
+<img width="1824" height="931" alt="image" src="https://github.com/user-attachments/assets/0ee10013-99d1-42b4-8af6-04c023671bb2" />
+
+
 
 
 
