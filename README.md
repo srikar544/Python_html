@@ -151,3 +151,15 @@ Click on Submit
 
 <img width="1915" height="482" alt="image" src="https://github.com/user-attachments/assets/2d150351-8d3d-42a3-adab-cb00281fa7b1" />
 
+In the DB First fetch the schema:
+
+<img width="481" height="714" alt="image" src="https://github.com/user-attachments/assets/0f676eb4-4e11-4781-8139-3331172bbc26" />
+
+run the query select * from user
+
+<img width="911" height="522" alt="image" src="https://github.com/user-attachments/assets/e3b5d821-a78b-4c31-8118-11a6f1a14561" />
+
+run the query select * from note
+
+<img width="476" height="567" alt="image" src="https://github.com/user-attachments/assets/e1782b78-fa97-4ca8-88c2-3b8ddf898d4f" />
+
